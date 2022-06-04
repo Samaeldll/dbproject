@@ -107,7 +107,7 @@ class telenpc : public CreatureScript
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_guild_forgreatjusticerank2:25|tАрхангел Михаил", GOSSIP_SENDER_MAIN, 202);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_blackhand:25|tАзог Завоеватель", GOSSIP_SENDER_MAIN, 203);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_mogufemales:25|tАрхител", GOSSIP_SENDER_MAIN, 204);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_thenighthold_guldan:25|tГул'Дан", GOSSIP_SENDER_MAIN, 205)
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_thenighthold_guldan:25|tГул'Дан", GOSSIP_SENDER_MAIN, 205);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
 
