@@ -88,9 +88,6 @@ class telenpc : public CreatureScript
 	{
 		switch(action)
 		{
-		case 999: //Возврат
-		create_menu(player, creature);
-        break;
 		
 		case 1:
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_chiefukorzsandscalp:30|tЗул'Фаррак", GOSSIP_SENDER_MAIN, 100, "Вы уверены?", 0, false);
@@ -101,7 +98,6 @@ class telenpc : public CreatureScript
             player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/misc_drogbartotem02:30|tИспытание крестоносца", GOSSIP_SENDER_MAIN, 105);
             player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_dungeon_the stonecore_ozruk:30|tКрепость Бурь", GOSSIP_SENDER_MAIN, 106);
 			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_gruul:30|tЛогово Груула [Донат]", GOSSIP_SENDER_MAIN, 107);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:30|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
 
@@ -111,8 +107,7 @@ class telenpc : public CreatureScript
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_guild_forgreatjusticerank2:25|tАрхангел Михаил", GOSSIP_SENDER_MAIN, 202);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_blackhand:25|tАзог Завоеватель", GOSSIP_SENDER_MAIN, 203);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_mogufemales:25|tАрхител", GOSSIP_SENDER_MAIN, 204);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_thenighthold_guldan:25|tГул'Дан", GOSSIP_SENDER_MAIN, 205);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_thenighthold_guldan:25|tГул'Дан", GOSSIP_SENDER_MAIN, 205)
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
 
@@ -121,7 +116,6 @@ class telenpc : public CreatureScript
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОзеро Эре'Нору", GOSSIP_SENDER_MAIN, 302);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОзеро Дыхания Зимы", GOSSIP_SENDER_MAIN, 300);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tРыбацкое судно", GOSSIP_SENDER_MAIN, 303);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
               
@@ -136,14 +130,12 @@ class telenpc : public CreatureScript
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОстров Алькац", GOSSIP_SENDER_MAIN, 402);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОстров ГМ", GOSSIP_SENDER_MAIN, 403);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tТемные берега", GOSSIP_SENDER_MAIN, 404);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break;
 			
-		case 6:
+		case 8:
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/inv_ore_gold_nugget:25|tЗолота Лихордка", GOSSIP_SENDER_MAIN, 500);
 		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/monk_stance_whitetiger:25|tЭфириальный Сброс", GOSSIP_SENDER_MAIN, 501);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
 
