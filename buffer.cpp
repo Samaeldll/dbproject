@@ -37,9 +37,9 @@ class npc_buffer : public CreatureScript
            }
 
         player->PlayerTalkClass->ClearMenus();
-        player->ADD_GOSSIP_ITEM(GOSSIP_ICON_MONEY_BAG, "|TInterface\\icons\\Achievement_PVP_H_15:25:25:-18:0|t[Баффы за хонор] ->", GOSSIP_SENDER_MAIN, 1);
-        player->ADD_GOSSIP_ITEM(GOSSIP_ICON_MONEY_BAG, "|TInterface\\icons\\Achievement_Arena_2v2_7:25:25:-18:0|t[Баффы за ап] ->", GOSSIP_SENDER_MAIN, 2);
-        player->ADD_GOSSIP_ITEM(GOSSIP_ICON_MONEY_BAG, "|TInterface\\icons\\Achievement_Arena_3v3_7:25:25:-18:0|t[Баффы за монеты онлайна] ->", GOSSIP_SENDER_MAIN, 3);
+        player->ADD_GOSSIP_ITEM(GOSSIP_ICON_MONEY_BAG, "|TInterface/icons/Achievement_PVP_H_15:25:25:-18:0|t[Баффы за хонор] ->", GOSSIP_SENDER_MAIN, 1);
+        player->ADD_GOSSIP_ITEM(GOSSIP_ICON_MONEY_BAG, "|TInterface/icons/Achievement_Arena_2v2_7:25:25:-18:0|t[Баффы за ап] ->", GOSSIP_SENDER_MAIN, 2);
+        player->ADD_GOSSIP_ITEM(GOSSIP_ICON_MONEY_BAG, "|TInterface/icons/Achievement_Arena_3v3_7:25:25:-18:0|t[Баффы за монеты онлайна] ->", GOSSIP_SENDER_MAIN, 3);
         player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
         return true;
     }
@@ -49,22 +49,22 @@ class npc_buffer : public CreatureScript
     switch (action)
         {
         case 1:
-          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface\\icons\\Achievement_PVP_H_15:25:25:-18:0|t[Баффы за 10к хонора] ->", GOSSIP_SENDER_MAIN, 4);
-          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface\\icons\\Achievement_PVP_H_15:25:25:-18:0|t[Баффы за 15к хонора] ->", GOSSIP_SENDER_MAIN, 5);
+          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface/icons/Achievement_PVP_H_15:25:25:-18:0|t[Баффы за 10к хонора] ->", GOSSIP_SENDER_MAIN, 4);
+          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface/icons/Achievement_PVP_H_15:25:25:-18:0|t[Баффы за 15к хонора] ->", GOSSIP_SENDER_MAIN, 5);
           player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
           break;
 
         case 2:
           player->PlayerTalkClass->ClearMenus();
-          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface\\icons\\Achievement_Arena_2v2_7:25:25:-18:0|t[Баффы за 50 апа] ->", GOSSIP_SENDER_MAIN, 6);
-          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface\\icons\\Achievement_Arena_2v2_7:25:25:-18:0|t[Баффы за 75 апа] ->", GOSSIP_SENDER_MAIN, 7);
+          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface/icons/Achievement_Arena_2v2_7:25:25:-18:0|t[Баффы за 50 апа] ->", GOSSIP_SENDER_MAIN, 6);
+          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface/icons/Achievement_Arena_2v2_7:25:25:-18:0|t[Баффы за 75 апа] ->", GOSSIP_SENDER_MAIN, 7);
           player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
           break;
 
         case 3:
           player->PlayerTalkClass->ClearMenus();
-          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface\\icons\\Achievement_Arena_3v3_7:25:25:-18:0|t[Баффы за 3 монеты онлайна] ->", GOSSIP_SENDER_MAIN, 8);
-          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface\\icons\\Achievement_Arena_3v3_7:25:25:-18:0|t[Баффы за 6 монет онлайна] ->", GOSSIP_SENDER_MAIN, 9);
+          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface/icons/Achievement_Arena_3v3_7:25:25:-18:0|t[Баффы за 3 монеты онлайна] ->", GOSSIP_SENDER_MAIN, 8);
+          player->ADD_GOSSIP_ITEM(GOSSIP_ICON_TALK, "|TInterface/icons/Achievement_Arena_3v3_7:25:25:-18:0|t[Баффы за 6 монет онлайна] ->", GOSSIP_SENDER_MAIN, 9);
           player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
           break;
 
@@ -205,7 +205,6 @@ class npc_buffer : public CreatureScript
             }
 
         case 17:
-          if (buff(90021, player, creature))
         if (player->GetItemCount(90001) < 3)
             {
                 creature->MonsterWhisper("У вас недостаточно монет онлайна для совершения покупки!", player);
