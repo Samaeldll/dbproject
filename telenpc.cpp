@@ -72,16 +72,16 @@ class telenpc : public CreatureScript
               return false;
 	}
   
-          player->PlayerTalkClass->ClearMenus();
+            player->PlayerTalkClass->ClearMenus();
 
-           player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/Achievement_General:30:30:-18:0|tСтарт Локация", GOSSIP_SENDER_MAIN, 5); 
-           player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/Achievement_Reputation_KirinTor:30:30:-18:0|tПодземелья", GOSSIP_SENDER_MAIN, 1); 
-           player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/Achievement_Boss_LichKing:30:30:-18:0|tМировые боссы", GOSSIP_SENDER_MAIN, 3); 
-           player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/trade_engineering:30:30:-18:0|tВремя до респавна боссов", GOSSIP_SENDER_MAIN, 7);
-           player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/inv_fishingchair:30:30:-18:0|tРыбалка", GOSSIP_SENDER_MAIN, 4); 
-           player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/inv_ingot_03:30:30:-18:0|tФарм Локации", GOSSIP_SENDER_MAIN, 8); 
-           player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/Spell_Shadow_Teleport:30:30:-18:0|tЕвенты", GOSSIP_SENDER_MAIN, 6); 
-           player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
+            player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/Achievement_General:30:30:-18:0|tСтарт Локация", GOSSIP_SENDER_MAIN, 5); 
+            player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/Achievement_Reputation_KirinTor:30:30:-18:0|tПодземелья", GOSSIP_SENDER_MAIN, 1); 
+            player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/Achievement_Boss_LichKing:30:30:-18:0|tМировые боссы", GOSSIP_SENDER_MAIN, 3); 
+            player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/trade_engineering:30:30:-18:0|tВремя до респавна боссов", GOSSIP_SENDER_MAIN, 7);
+            player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/inv_fishingchair:30:30:-18:0|tРыбалка", GOSSIP_SENDER_MAIN, 4); 
+            player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/inv_ingot_03:30:30:-18:0|tФарм Локации", GOSSIP_SENDER_MAIN, 8); 
+            player->ADD_GOSSIP_ITEM( GOSSIP_ICON_MONEY_BAG, "|TInterface/ICONS/Spell_Shadow_Teleport:30:30:-18:0|tЕвенты", GOSSIP_SENDER_MAIN, 6); 
+            player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 	    return true;
     }
        void SendDefaultMenu(Player* player, Creature* creature, uint32 action)
