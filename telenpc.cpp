@@ -84,13 +84,13 @@ class telenpc : public CreatureScript
            player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 	    return true;
     }
-       void SendDefaultMenu(Player* player, Item* item, Creature* creature, uint32 action)
+       void SendDefaultMenu(Player* player, Creature* creature, uint32 action)
 	{
 		switch(action)
 		{
 		
 		case 1:
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_chiefukorzsandscalp:30|tЗул'Фаррак", GOSSIP_SENDER_MAIN, 100, "Вы уверены?", 0, false);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_chiefukorzsandscalp:30|tЗул'Фаррак", GOSSIP_SENDER_MAIN, 100);
             player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_dungeon_ulduar80_normal:30|tЧертоги Молний", GOSSIP_SENDER_MAIN, 101);
             player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_reputation_wyrmresttemple:30|tРубиновое святилище", GOSSIP_SENDER_MAIN, 102);
             player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_ladyvashj:30|tЗмеиное святилище", GOSSIP_SENDER_MAIN, 103);
@@ -140,7 +140,7 @@ class telenpc : public CreatureScript
 		    break; 
 
 		case 7:
-                  UpdateRespTime(player);
+            UpdateRespTime(player);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
 
