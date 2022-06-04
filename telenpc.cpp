@@ -84,44 +84,44 @@ class telenpc : public CreatureScript
            player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 	    return true;
     }
-       void SendDefaultMenu(Player* player, Creature* creature, uint32 action)
+       void SendDefaultMenu(Player* player, Item* item, Creature* creature, uint32 action)
 	{
 		switch(action)
 		{
 		case 999: //Возврат
-		create_menu(player, item);
+		create_menu(player, creature);
         break;
 		
 		case 1:
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_boss_chiefukorzsandscalp:30|tЗул'Фаррак", GOSSIP_SENDER_MAIN, 100, "Вы уверены?", 0, false);
-                    player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_dungeon_ulduar80_normal:30|tЧертоги Молний", GOSSIP_SENDER_MAIN, 101);
-                    player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_reputation_wyrmresttemple:30|tРубиновое святилище", GOSSIP_SENDER_MAIN, 102);
-                    player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_boss_ladyvashj:30|tЗмеиное святилище", GOSSIP_SENDER_MAIN, 103);
-                    player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_boss_zuljin:30|tЗул'Аман", GOSSIP_SENDER_MAIN, 104);
-                    player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\misc_drogbartotem02:30|tИспытание крестоносца", GOSSIP_SENDER_MAIN, 105);
-                    player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_dungeon_the stonecore_ozruk:30|tКрепость Бурь", GOSSIP_SENDER_MAIN, 106);
-					player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_boss_gruul:30|tЛогово Груула [Донат]", GOSSIP_SENDER_MAIN, 107);
-					player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_bg_returnxflags_def_wsg:30|tВернуться", GOSSIP_SENDER_MAIN, 999);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_chiefukorzsandscalp:30|tЗул'Фаррак", GOSSIP_SENDER_MAIN, 100, "Вы уверены?", 0, false);
+            player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_dungeon_ulduar80_normal:30|tЧертоги Молний", GOSSIP_SENDER_MAIN, 101);
+            player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_reputation_wyrmresttemple:30|tРубиновое святилище", GOSSIP_SENDER_MAIN, 102);
+            player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_ladyvashj:30|tЗмеиное святилище", GOSSIP_SENDER_MAIN, 103);
+            player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_zuljin:30|tЗул'Аман", GOSSIP_SENDER_MAIN, 104);
+            player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/misc_drogbartotem02:30|tИспытание крестоносца", GOSSIP_SENDER_MAIN, 105);
+            player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_dungeon_the stonecore_ozruk:30|tКрепость Бурь", GOSSIP_SENDER_MAIN, 106);
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_gruul:30|tЛогово Груула [Донат]", GOSSIP_SENDER_MAIN, 107);
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:30|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
 
 		case 3:
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\achievement_boss_archaedas:25|tУфориус Фрост", GOSSIP_SENDER_MAIN, 200);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\achievement_boss_highmaul_fungalgiant:25|tАдский крушитель", GOSSIP_SENDER_MAIN, 201);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\achievement_guild_forgreatjusticerank2:25|tАрхангел Михаил", GOSSIP_SENDER_MAIN, 202);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\achievement_boss_blackhand:25|tАзог Завоеватель", GOSSIP_SENDER_MAIN, 203);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\achievement_boss_mogufemales:25|tАрхител", GOSSIP_SENDER_MAIN, 204);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\achievement_thenighthold_guldan:25|tГул'Дан", GOSSIP_SENDER_MAIN, 205);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_archaedas:25|tУфориус Фрост", GOSSIP_SENDER_MAIN, 200);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_highmaul_fungalgiant:25|tАдский крушитель", GOSSIP_SENDER_MAIN, 201);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_guild_forgreatjusticerank2:25|tАрхангел Михаил", GOSSIP_SENDER_MAIN, 202);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_blackhand:25|tАзог Завоеватель", GOSSIP_SENDER_MAIN, 203);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_boss_mogufemales:25|tАрхител", GOSSIP_SENDER_MAIN, 204);
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_thenighthold_guldan:25|tГул'Дан", GOSSIP_SENDER_MAIN, 205);
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
 
 		case 4:
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tОзеро Лок", GOSSIP_SENDER_MAIN, 301);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tОзеро Эре'Нору", GOSSIP_SENDER_MAIN, 302);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tОзеро Дыхания Зимы", GOSSIP_SENDER_MAIN, 300);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tРыбацкое судно", GOSSIP_SENDER_MAIN, 303);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОзеро Лок", GOSSIP_SENDER_MAIN, 301);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОзеро Эре'Нору", GOSSIP_SENDER_MAIN, 302);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОзеро Дыхания Зимы", GOSSIP_SENDER_MAIN, 300);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tРыбацкое судно", GOSSIP_SENDER_MAIN, 303);
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
               
@@ -131,19 +131,19 @@ class telenpc : public CreatureScript
 		    break;
 
 		case 6:
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tОзеро Лок", GOSSIP_SENDER_MAIN, 400);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tОстров Раназьяр", GOSSIP_SENDER_MAIN, 401);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tОстров Алькац", GOSSIP_SENDER_MAIN, 402);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tОстров ГМ", GOSSIP_SENDER_MAIN, 403);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\Achievement_bg_trueavshutout:25|tТемные берега", GOSSIP_SENDER_MAIN, 404);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОзеро Лок", GOSSIP_SENDER_MAIN, 400);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОстров Раназьяр", GOSSIP_SENDER_MAIN, 401);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОстров Алькац", GOSSIP_SENDER_MAIN, 402);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tОстров ГМ", GOSSIP_SENDER_MAIN, 403);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/Achievement_bg_trueavshutout:25|tТемные берега", GOSSIP_SENDER_MAIN, 404);
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break;
 			
 		case 6:
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\inv_ore_gold_nugget:25|tЗолота Лихордка", GOSSIP_SENDER_MAIN, 500);
-		    player->ADD_GOSSIP_ITEM( 2, "|TInterface\ICONS\monk_stance_whitetiger:25|tЭфириальный Сброс", GOSSIP_SENDER_MAIN, 501);
-			player->ADD_GOSSIP_ITEM( 2, "|TInterface\icons\achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/inv_ore_gold_nugget:25|tЗолота Лихордка", GOSSIP_SENDER_MAIN, 500);
+		    player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/monk_stance_whitetiger:25|tЭфириальный Сброс", GOSSIP_SENDER_MAIN, 501);
+			player->ADD_GOSSIP_ITEM( 2, "|TInterface/icons/achievement_bg_returnxflags_def_wsg:25|tВернуться", GOSSIP_SENDER_MAIN, 999);
 		    player->PlayerTalkClass->SendGossipMenu(85000,creature->GetGUID());
 		    break; 
 
